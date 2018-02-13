@@ -2,7 +2,7 @@
 	"name": "pimatic",
 	"scripts": {
 		"test": "grunt test",
-		"start": "$HOME/pimatic-app/node_modules/pimatic/package.json"
+		"start": "$HOME/node_modules/pimatic/package.json"
 	},
 	"dependencies": {
 		"pimatic": "^0.9.0"

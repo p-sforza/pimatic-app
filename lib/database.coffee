@@ -55,7 +55,7 @@ module.exports = (env) ->
           if connection.filename is ':memory:'
             connection.filename = 'file::memory:?cache=shared'
           else
-            connection.filename = path.resolve(@framework.maindir, '..', connection.filename)
+            connection.filename = path.resolve(@framework.maindir, '../..', connection.filename)
         )
 
       pending = Promise.resolve()

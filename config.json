@@ -1,0 +1,103 @@
+{
+  "//": " Please only change this file when pimatic is NOT running, otherwise pimatic will overwrite your changes.",
+  "settings": {
+    "httpServer": {
+      "enabled": true,
+      "port": 8080
+    },
+    "database": {
+      "deviceAttributeLogging": [
+        {
+          "deviceId": "*",
+          "attributeName": "*",
+          "type": "*",
+          "interval": "0",
+          "expire": "7d"
+        },
+        {
+          "deviceId": "*",
+          "attributeName": "*",
+          "type": "continuous",
+          "interval": "5min",
+          "expire": "7d"
+        },
+        {
+          "deviceId": "*",
+          "attributeName": "temperature",
+          "type": "number",
+          "expire": "1y"
+        },
+        {
+          "deviceId": "*",
+          "attributeName": "humidity",
+          "type": "number",
+          "expire": "1y"
+        }
+      ],
+      "messageLogging": [
+        {
+          "level": "*",
+          "tags": [],
+          "expire": "7d"
+        },
+        {
+          "level": "debug",
+          "tags": [],
+          "expire": "0"
+        }
+      ]
+    },
+    "authentication": {
+      "secret": "ugrxNRwjaIh5Jy3SSk6ak4FITDo2H9GAhx5omnNF7cjXVPFMaNbQZ+t9Zz/i6JteKpJAKEcvS2axjkg9JVudzA=="
+    },
+    "httpsServer": {},
+    "cors": {},
+    "gui": {}
+  },
+  "plugins": [
+    {
+      "plugin": "cron"
+    },
+    {
+      "plugin": "mobile-frontend"
+    }
+  ],
+  "devices": [],
+  "rules": [],
+  "pages": [
+    {
+      "id": "favourite",
+      "name": "Favourites",
+      "devices": []
+    }
+  ],
+  "groups": [],
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    }
+  ],
+  "roles": [
+    {
+      "name": "admin",
+      "permissions": {
+        "pages": "write",
+        "rules": "write",
+        "variables": "write",
+        "messages": "write",
+        "events": "write",
+        "devices": "write",
+        "groups": "write",
+        "plugins": "write",
+        "updates": "write",
+        "database": "write",
+        "config": "write",
+        "controlDevices": true,
+        "restart": true
+      }
+    }
+  ],
+  "variables": []
+}
